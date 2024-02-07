@@ -32,7 +32,7 @@
 	function init() {
 		var images = document.getElementsByTagName("img");
 		for (var i = 0; i < images.length; i++) {
-			images[i].onclick = showAnswer;
+			images[i].onhover = showAnswer;
 		}
 	};
 
@@ -45,7 +45,10 @@
 
   </script>
 <p>
-
+ <style>
+	body { margin: 20px; }
+	img { margin: 20px; }
+  </style>
 	<img id="one" src="1.jpg">
 	<img id="two" src="2.jpg">
 	<img id="three" src="3.jpg">
