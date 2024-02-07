@@ -1,42 +1,24 @@
+<link rel="stylesheet" href="style.css">
+<div class="container">
+	<div class="flipper" id="target">
+		<div class="front">
+			<a href="#target" class="home button">обо мне</a>
+			<div class="share-block">
+			</div>
+			<h1>КОНТРОЛЬНЫЙ&САЙТ</h1>
+		</div>
+		<div class="back">
+			<a href="#close" class="close button"><i class="fa fa-home"></i></a>
+			<div class="inner">
+				<h2>Всем привет!Это эксперементальный сайт.
+				На нем буду самые крутые и красивый фишки дизайна.
+				Такие как:</h2>
+				<p>ПРИМЕНЕНИЕ ТРАНСФОРМАЦИИ.</p>
+				<p>ПРОЗРАЧНОСТИ.</p>
+				<p>КАРТИНОК.</p>
+				<p>И МНОГО ДРУГОГО</p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title> Image Guess </title>
-  <style>
-	body { margin: 20px; }
-	img { margin: 20px; }
-  </style>
-  <script>
-	window.onload = function() {
-		var images = document.getElementsByTagName("img");
-		for (var i = 0; i < images.length; i++) {
-			images[i].onmouseover = showAnswer;
-			images[i].onmouseout = reblur;
-		}
-	};
-	function showAnswer(eventObj) {
-		var image = eventObj.target;
-		var name = image.id;
-		name = name + ".jpg";
-		image.src = name;
-	}
-
-	function reblur(eventObj) {
-		var image = eventObj.target;
-		var name = image.id;
-		name = name + "blur.jpg";
-		image.src = name;
-	}
-  </script>
-</head>
-<body>
-	<img id="zero" src="1.jpg">
-	<img id="one" src="2.jpg">
-	<img id="two" src="3.jpg">
-	<img id="three" src="4.jpg">
-	<img id="four" src="5.jpg">
-	<img id="five" src="6.jpg">
-</body>
-</html>
