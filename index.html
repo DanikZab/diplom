@@ -26,23 +26,27 @@
 </div>
 <h3>Мини галерея</h3>
 
-	  <script>
-	window.onload = init;
-
-	function init() {
+	    <script>
+	window.onload = function() {
 		var images = document.getElementsByTagName("img");
 		for (var i = 0; i < images.length; i++) {
-			images[i].onhover = showAnswer;
+			images[i].onmouseover = showAnswer;
+			images[i].onmouseout = reblur;
 		}
 	};
-
-	function showAnswer(e) {
-		var image = e.target;
+	function showAnswer(eventObj) {
+		var image = eventObj.target;
 		var name = image.id;
 		name = name + ".jpg";
 		image.src = name;
 	}
 
+	function reblur(eventObj) {
+		var image = eventObj.target;
+		var name = image.id;
+		name = name + "blur.jpg";
+		image.src = name;
+	}
   </script>
 <p>
  <style>
