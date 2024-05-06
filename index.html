@@ -53,7 +53,6 @@
 	body { margin: 20px; }
 	img { margin: 20px; }
   </style>
-	<img id="one" src="1.jpg">
          <img id="two" src="1blur.jpg">
 </p>
 
@@ -61,40 +60,7 @@
 <body>
 
 
-  <textarea id="textExample" rows="5" cols="60">Проверка сайта!
-Все изображения загружены
-Css работает исправно
-Html работает исправно
-Js работает исправно
-  </textarea>
 
-  <button onclick="animateText(textExample)">Запустить анимацию набора текста!</button>
-
-  <script>
-    function animateText(textArea) {
-      let text = textArea.value;
-      let to = text.length,
-        from = 0;
-
-      animate({
-        duration: 5000,
-        timing: bounce,
-        draw: function(progress) {
-          let result = (to - from) * progress + from;
-          textArea.value = text.slice(0, Math.ceil(result))
-        }
-      });
-    }
-
-
-    function bounce(timeFraction) {
-      for (let a = 0, b = 1; 1; a += b, b /= 2) {
-        if (timeFraction >= (7 - 4 * a) / 11) {
-          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
-        }
-      }
-    }
-  </script>
 
 
 </body>
