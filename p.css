@@ -1,12 +1,9 @@
 p { 
   color: Black;
-  font-size: 6em;
+  font-size: 3em;
   font-family: 'Playfair Display', serif;
-  margin: 14;
+  margin: 7;
   transform: translate(-50%, -50%);
-  position: absolute; 
-  top: 50%; 
-  left: 50%;
   white-space: nowrap;
   letter-spacing: 5px;
 }
