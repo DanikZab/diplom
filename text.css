@@ -1,12 +1,12 @@
 code {
-	font-size: 18px;
+	font-size: 40px;
 	color: #000;
-	padding-left: 2px;
+	padding-left: 10px;
 	display: inline;
 	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
 	padding: 0 10px 0 0;
 	color: #FFFFFF;
-	line-height: 3px;
-	font-size: 7px;
+	line-height: 15px;
+	font-size: 30px;
 }
