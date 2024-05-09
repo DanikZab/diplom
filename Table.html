@@ -1,1 +1,195 @@
-
+<link rel="stylesheet" href="table.css">
+<link rel="stylesheet" href="styles.css">
+<header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Text.html">Текстовые эффекты</a></li>
+                <li><a href="Table.html">Таблицы</a></li>
+                <li><a href="Transform.html">Трансформации</a></li>
+                <li><a href="picture.html">Галерея-Слайдер</a></li>
+                <li><a href="animation.html">Анимация CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+<table>
+<tr><th colspan="5">Мои рабочие дни, Май 2024</th></tr>
+ <tr>
+  <td>Понедельник</td>
+  <td>Вторник</td>
+  <td>Среда</td>
+  <td>Четверг</td>
+  <td>Пятница</td>
+ </tr>
+<tr>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>10</td>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>17</td>
+  <td>18</td>
+  <td>19</td>
+  <td>20</td>
+</tr>
+  <tr>
+  <td>23</td>
+  <td>24</td>
+  <td>25</td>
+  <td>26</td>
+  <td>27</td>
+</tr>
+  <tr>
+  <td>30</td>
+  <td>31</td>
+  <td colspan="3"></td>
+</tr>
+ </table>
+</body>
+<p>Вот такую вот таблицу календарь вы сможете сделать с помощью html и css</p>
+<p>Для этого нужно понять, как вообще строится таблица</p>
+<p>Шаг 1
+Добавление заголовка</p>
+<code>
+  &lt;<span>table</span>&gt;tr&gt;&lt;th colspan="5"&gt;Мои рабочие дни, Май 2024&lt;/th>&lt;/tr&gt;&lt;<span>/table</table>&gt;
+</code>
+<p>Шаг 2
+Добавление столбиков</p>
+<code>
+  &lt;<span>table</span>&gt;tr&gt;&lt;th colspan="5"&gt;Мои рабочие дни, Май 2024&lt;/th>&lt;/tr&gt;&lt;
+	 &lt;tr>
+  &lt;td&gt;Понедельник&lt;/td&gt;
+  &lt;td&gt;Вторник&lt;/td&gt;
+  &lt;td&gt;Среда&lt;/td&gt;
+  &lt;td&gt;Четверг&lt;/td&gt;
+  &lt;td&gt;Пятница&lt;/td&gt;
+ &lt;/tr&gt;
+	<span>/table</table>&gt;
+</code>
+<p>Шаг 3
+Добавление строк</p>
+<code>
+  &lt;<span>table</span>&gt;tr&gt;&lt;th colspan="5"&gt;Мои рабочие дни, Май 2024&lt;/th>&lt;/tr&gt;&lt;
+	 &lt;tr>
+  &lt;td&gt;Понедельник&lt;/td&gt;
+  &lt;td&gt;Вторник&lt;/td&gt;
+  &lt;td&gt;Среда&lt;/td&gt;
+  &lt;td&gt;Четверг&lt;/td&gt;
+  &lt;td&gt;Пятница&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+   &lt;td&gt;2 &lt;/td&gt;
+   &lt;td&gt;3 &lt;/td&gt;
+   &lt;td&gt;4 &lt;/td&gt;
+   &lt;td&gt;5 &lt;/td&gt;
+   &lt;td&gt;6 &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+   &lt;td&gt;9 &lt;/td&gt;
+   &lt;td&gt;10 &lt;/td&gt;
+   &lt;td&gt;11 &lt;/td&gt;
+   &lt;td&gt;12 &lt;/td&gt;
+   &lt;td&gt;13 &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+   &lt;td&gt;16 &lt;/td&gt;
+   &lt;td&gt;17 &lt;/td&gt;
+   &lt;td&gt;18 &lt;/td&gt;
+   &lt;td&gt;19 &lt;/td&gt;
+   &lt;td&gt;20 &lt;/td&gt;
+ &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td&gt;23 &lt;/td&gt;
+   &lt;td&gt;24 &lt;/td&gt;
+   &lt;td&gt;25 &lt;/td&gt;
+   &lt;td&gt;26 &lt;/td&gt;
+   &lt;td&gt;27 &lt;/td&gt;
+ &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td&gt;30 &lt;/td&gt;
+   &lt;td&gt;31 &lt;/td&gt;
+   &lt;td colspan="3"&gt; &lt;/td&gt;
+ &lt;/tr&gt;	
+	<span>/table</table>&gt;
+</code>
+<p>Шаг 4
+Добавление оформления CSS(черный промежуток это новый абзац)</p>
+<code>
+table {
+</code>
+<code>
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+</code>
+<code>
+text-align: center;
+</code>
+<code>
+border-collapse: collapse;
+</code>
+<code>
+border-spacing: 5px;
+</code>
+<code>
+background: #E1E3E0;
+</code>
+<code>
+border-radius: 20px;
+</code>
+<code>
+}
+</code>
+<code>
+th {
+</code>
+<code>
+font-size: 22px;
+</code>
+<code>
+font-weight: 300;
+</code>
+<code>
+padding: 12px 10px;
+</code>
+<code>
+border-bottom: 2px solid #F56433;
+</code>
+<code>
+color: #F56433;
+</code>
+<code>
+}
+</code>
+<code>
+tbody tr:nth-child(2) {
+</code>
+<code>
+border-bottom: 2px solid #F56433;
+</code>
+<code>
+}
+</code>
+<code>
+td {
+</code>
+<code>
+padding: 10px;
+</code>
+<code>
+color: #8D8173;
+</code>
+<code>
+}
+</code>
+    <footer>
+        <p>&copy; 2024 Курсовой сайт. Все сделано на совесть🤣 .</p>
+    </footer>
