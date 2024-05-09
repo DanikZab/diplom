@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="styles.css">
-    link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 </head>
 <body>
     <header>
@@ -31,6 +31,47 @@
     <p> 4. Кнопки</p>
     <p> 5. Файлы</p>
     <p> 6. И так далее</p>
+        <style>
+      body {
+      background: #eee;
+      text-align: center;
+      }
+      button {
+      display: inline-block;
+      background-color: #1c87c9;
+      color: #eee;
+      margin: 25px;
+      position: relative;
+      width: 140px;
+      height: 45px;
+      border-radius: 3px;
+      border: none;
+      font-size: 1.5em;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px 0 #999;
+      }
+      button:hover {
+      background-color: #999;
+      color: #ffcc00;
+      }
+      #happy {
+      cursor: url("/uploads/media/default/0001/02/ee4486d1b3fc998e444c3b0100c73db282760eb5.png"), auto;
+      }
+      #sad {
+      cursor: url("/uploads/media/default/0001/02/38cb87a27305100311d9c96e5a5ebb88f04d8034.png"), auto;
+      }
+      #love {
+      cursor: url("/uploads/media/default/0001/02/4be757cf6e9ffc865861649ca423654484ad3dc1.png"), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Какое у вас впечатление от нашей веб-страницы?</h2>
+    <button id="happy">Радостное</button>
+    <button id="sad">Грустное</button>
+    <button id="love">Влюбленное</button>
+  </body>
     <footer>
         <p>&copy; 2024 Курсовой сайт. Все сделано на совесть🤣 .</p>
     </footer>
