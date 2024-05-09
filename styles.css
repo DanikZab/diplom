@@ -33,7 +33,9 @@ main {
 }
 
 footer {
-  color: black;
+  color: white;
+  display: block;
+  background-color: gray;
   position: absolute;
   left: 0;
   bottom: 0;
