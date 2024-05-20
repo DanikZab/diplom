@@ -132,7 +132,7 @@ html, body{
   background: linear-gradient( to left,  #3b5998 0%, #476bb8 100%);
   margin: 20px 0 50px 0;
 }
-p::selection {
+p {
    color: #fff;
    background-color: #000; 
 }
