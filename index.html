@@ -1,5 +1,31 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная страница посетителя</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        input, select, textarea {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    
 <html><body>
 <input type="date" tabindex="1">
 Выбор даты
@@ -91,4 +117,29 @@ value="no"> </label></li>
   <input type="date" namе="имя" valuе="2013-01-14">
   <input type="submit"><input type="reset">
   </fieldset></р>
+  <fieldset>
+        <legend>Информация о пользователе</legend>
+        <label for="nickname">Nickname:</label>
+        <input type="text" id="nickname" placeholder="Nickname" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required>
+        <label for="search">Поле поиска:</label>
+        <input type="search" id="search">
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" placeholder="123-456-7890">
+        <label for="website">Адрес веб:</label>
+        <input type="url" id="website" placeholder="https://example.com">
+    </fieldset>
+
+    <fieldset>
+        <legend>Подписка на рассылку</legend>
+        <label><input type="radio" name="subscribe" value="yes" checked> Включите меня в список рассылки</label>
+        <label><input type="radio" name="subscribe" value="no"> Не включайте меня в список рассылки</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Официальная заявка на конкурс</legend>
+        <label for="contest_entry">Расскажите нам, за что вы любите эту группу:</label>
+        <textarea id="contest_entry" rows="5"></textarea>
+    </fieldset>
   </body></html>
