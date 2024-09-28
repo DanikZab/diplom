@@ -1,0 +1,61 @@
+ multiple of stripes `background-size` height */
+	padding: Round(up, .1em, var(--s)) .05em 0 0;
+	/* give it a `height` for the `content-box` that's 
+	 * a multiple of stripes `background-size` height 
+	 * plus half thi@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$a: 22.5deg; // middle split line angle
+
+html, body, div { display: grid }
+
+html { min-height: 100% } /* so it covers entire viewport */
+
+body {
+	--s: 4px; /* set this as a CSS var to modify in MQ later */
+	--o: .5*var(--s);
+	background: 
+		url(https://images.unsplash.com/photo-1530533609496-06430e875bbf?w=1600) 
+			50%/ cover;
+	/* set here because of Safari bug 🪲 267185
+	 * https://bugs.webkit.org/show_bug.cgi?id=267185 */
+	font: clamp(5em, Min(65vh, 35vw), 39em)/ .75 
+		bebas neue, sans-serif;
+	
+	@media (min-width: 480px) and (min-height: 320px) { --s: 6px }
+	
+	/* because Safari doesn't support this */
+	@supports (line-height: 1cap) { line-height: 1cap }
+}
+
+div {
+	/* store in CSS var part of stop list used by two gradients */
+	--sl: calc(50% - .5px), #0000 calc(50% + .5px);
+	/* place div in middle of `body` grid cell 
+	 * (covering entire `content-box` of `body`) */
+	place-self: center;
+	/* place text content in the middle of the one grid cell 
+	 * covering entire `content-box` of `div` itself */
+	place-content: center;
+	/* values depend on font 🚨 but make it such that 
+	 * there's equal spacing around text in all directions
+	 * and make it as stripes `background-size` height 
+	 * this ensures symmetry */
+	height: calc(Round(up, 1lh, var(--s)) - var(--o));
+	/* background broken in Firefox due to bug 🪲 1481498 
+	 * https://bugzilla.mozilla.org/show_bug.cgi?id=1481498 */
+	background: 
+		/* white text fill */
+		linear-gradient($a, #fff var(--sl)) text, 
+		/* black _cover_ for stripes in bottom left half */
+		linear-gradient($a, #000 var(--sl)), 
+		linear-gradient(#094770 50%, #0000 0) 
+			0 0/ 1% var(--s) /* stripes background */;
+	/* transparent text to see gradient background fill under */
+	color: #0000;
+	/* white stroke, same thickness as background lines */
+	-webkit-text-stroke: #fff calc(var(--o));
+	text-transform: uppercase;
+	/* so we don't see the black area of `background`, 
+	 * but the `body` image underneath */
+	mix-blend-mode: screen
+}
