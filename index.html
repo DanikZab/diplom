@@ -34,8 +34,34 @@
             </ul>
         </nav>
     </header>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Rainbow Text</title>
+<style>
+    @keyframes rainbowText {
+        0% { color: red; }
+        17% { color: orange; }
+        33% { color: yellow; }
+        50% { color: green; }
+        67% { color: blue; }
+        83% { color: indigo; }
+        100% { color: violet; }
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        animation: rainbowText 6s infinite alternate;
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+</style>
+</head>
+<body>
+    <h1>Добро пожаловать на мой сайт!</h1>
+</body>
     <main>
-        <h1>Добро пожаловать на мой сайт!😎</h1>
         <p>Это мой финальный сайт. Здесь Вы можете посмотреть и научиться тому, чему научился я.</p>
     </main>
     <h2>Для начала я хочу привести вам примеры из чего состоит сайт:</h2>
