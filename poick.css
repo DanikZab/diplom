@@ -1,34 +1,29 @@
-* {box-sizing: border-box;}
-form {
-  width: auto;
-  float: right;
-  margin-right: 30px;
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  color: black
 }
-input {
-  width: 250px;
-  height: 42px;
-  padding-left: 15px;
-  border-radius: 42px;
-  border: 2px solid #324b4e;
-  background: #F9F0DA;
-  outline: none;
-  position: relative;
-  transition: .5s linear;
+
+.typing-demo {
+  width: 58ch;
+  animation: typing 10s steps(58), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
 }
-input:focus {
-  width: 400px;
+
+@keyframes typing {
+  from {
+    width: 0
+  }
 }
-button {
-  width: 42px;
-  height: 42px;
-  background: none;
-  border: none;
-  position: absolute;
-  top: -8px;
-  right: 0;
-}
-button:before{
-  content: "\f002";
-  font-family: FontAwesome;
-  color: blue;
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
