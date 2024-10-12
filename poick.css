@@ -1,10 +1,3 @@
-.wrapper {
-  height: 100vh;
-  /*This part is important for centering*/
-  display: grid;
-  place-items: center;
-  color: black
-}
 
 .typing-demo {
   width: 58ch;
