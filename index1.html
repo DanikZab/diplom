@@ -57,113 +57,195 @@
 
 </body>
 <body>
-    <main>
-<h2>https://www.figma.com/design/pO7VtUrV5EciEJ9hJFZTbF/Untitled?node-id=0-1&node-type=canvas Фигма</h2><h2>
-https://wordpress.com/log-in?redirect_to=%2Fsites World Press</h2><h2>
-https://bittrex.com/account/login Битрекс</h2>
-<h2>https://stackblitz.com/edit/stackblitz-starters-blhowmrz?file=index.html</h2>
-	<div id=container>
-  Больше 
-  <div id=flip>
-    <div><div>РАБОТЫ</div></div>
-    <div><div>ПОЗИТИВА</div></div>
-    <div><div>ИНТЕРЕСОВ</div></div>
-<style>
+     <h1>Мой путь в веб-разработке и 3D-моделировании</h1>
+        <p>Добро пожаловать на мой сайт! Здесь я расскажу о своем опыте обучения и создания проектов.</p>
+        <div class="scroll-down">⬇️ Прокрутите вниз</div>
+    </section>
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-
-body {
-  margin:0px;
-  font-family:'Roboto';
+    <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <p>
+            Меня зовут [Ваше имя], и я увлечен веб-разработкой и 3D-моделированием. Мой путь начался несколько лет назад, когда я впервые открыл для себя мир программирования. С тех пор я постоянно учусь и совершенствую свои навыки.
+        </p>
+        <p>
+            Веб-разработка привлекла меня своей универсальностью. С помощью HTML, CSS и JavaScript можно создавать что угодно: от простых статических страниц до сложных веб-приложений. Я начал с основ, изучая теги HTML и свойства CSS, а затем перешел к более сложным темам, таким как анимации, работа с API и создание интерактивных элементов.
+        </p>
+        <p>
+            Одним из самых интересных моментов было изучение CSS-анимаций. Например, я создал кнопку, которая меняет цвет и увеличивается при наведении:
+        </p>
+        <pre><code>
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#container {
-  color:#999;
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
-  width:100%;
-  bottom:45%;
-  display:block;
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+        </code></pre>
+        <p>
+            Также я изучал JavaScript и создавал динамические элементы. Например, вот простой код для отображения текущего времени на странице:
+        </p>
+        <pre><code>
+function showTime() {
+    const now = new Date();
+    const timeElement = document.getElementById('time');
+    timeElement.textContent = now.toLocaleTimeString();
 }
 
-#flip {
-  height:50px;
-  overflow:hidden;
+setInterval(showTime, 1000);
+        </code></pre>
+        <p>
+            Я также работал с таблицами, чтобы отображать данные в удобном формате. Вот пример более сложной таблицы, которую я создал:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Технология</th>
+                    <th>Уровень владения</th>
+                    <th>Пример использования</th>
+                    <th>Сложность</th>
+                    <th>Рейтинг</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Продвинутый</td>
+                    <td>Создание структуры сайта</td>
+                    <td>Низкая</td>
+                    <td>⭐️⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Продвинутый</td>
+                    <td>Стилизация и анимации</td>
+                    <td>Средняя</td>
+                    <td>⭐️⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Средний</td>
+                    <td>Интерактивные элементы</td>
+                    <td>Высокая</td>
+                    <td>⭐️⭐️⭐️</td>
+                </tr>
+                <tr>
+                    <td>Three.js</td>
+                    <td>Начальный</td>
+                    <td>3D-графика в браузере</td>
+                    <td>Очень высокая</td>
+                    <td>⭐️⭐️</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Мои навыки</h2>
+        <p>
+            За время обучения я освоил множество технологий и инструментов. Вот некоторые из них:
+        </p>
+        <ul>
+            <li><strong>HTML</strong> — создание структуры веб-страниц.</li>
+            <li><strong>CSS</strong> — стилизация и анимации.</li>
+            <li><strong>JavaScript</strong> — создание интерактивных элементов.</li>
+            <li><strong>Blender</strong> — создание 3D-моделей.</li>
+            <li><strong>Three.js</strong> — работа с 3D-графикой в браузере.</li>
+        </ul>
+        <p>
+            Я также изучал фреймворки, такие как React и Vue.js, чтобы создавать более сложные веб-приложения. Например, вот пример кода на React:
+        </p>
+        <pre><code>
+import React from 'react';
+
+function App() {
+    return (
+        <div>
+            <h1>Привет, мир!</h1>
+        </div>
+    );
 }
 
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
+export default App;
+        </code></pre>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Мои проекты</h2>
+        <p>
+            Помимо веб-разработки, я увлекаюсь созданием 3D-моделей. Мне нравится работать в программах, таких как Blender, и создавать реалистичные объекты. Например, я создал 3D-модель дома с детализированным интерьером. Вот пример кода для создания простого куба в Blender:
+        </p>
+        <pre><code>
+import bpy
+
+# Создание куба
+bpy.ops.mesh.primitive_cube_add(size=2, location=(0, 0, 0))
+        </code></pre>
+        <p>
+            Также я изучал текстурирование и освещение, чтобы сделать модели более реалистичными. Вот пример настройки освещения:
+        </p>
+        <pre><code>
+import bpy
+
+# Добавление источника света
+bpy.ops.object.light_add(type='SUN', location=(10, 10, 10))
+        </code></pre>
+        <p>
+            Я также создал несколько проектов, где объединил веб-разработку и 3D-моделирование. Например, я сделал сайт, на котором можно вращать 3D-модель прямо в браузере с помощью библиотеки Three.js:
+        </p>
+        <pre><code>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
 }
 
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
+animate();
+        </code></pre>
+    </section>
 
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-  background:#DC143C;
-}
+    <section id="stats" class="stats">
+        <h2>Статистика</h2>
+        <p>
+            Вот график, который показывает мой прогресс в изучении веб-разработки и 3D-моделирования:
+        </p>
+        <canvas id="myChart"></canvas>
+    </section>
 
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
-}
+    <section id="gallery" class="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/400" alt="Пример 1">
+            <img src="https://via.placeholder.com/400" alt="Пример 2">
+            <img src="https://via.placeholder.com/400" alt="Пример 3">
+            <img src="https://via.placeholder.com/400" alt="Пример 4">
+        </div>
+    </section>
 
-p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
-}	
-</style>
-  </div>
-</div>
-<h2>Ссылка на мой тест по HTML https://onlinetestpad.com/zqoio5xnrbxpu</h2>
-<p>Даниил Забайкин</p>
-    </main>
-    <h2>Для начала я хочу привести вам примеры из чего состоит сайт:</h2>
-    <h2> 1. Текст</h2>
-    <h2> 2. Изображения</h2>
-    <h2> 3. Таблицы</h2>
-    <h2> 4. Кнопки</h2>
-    <h2> 5. Файлы</h2>
-    <h2> 6. И так далее</h2>
-       
-<h2>Создание текста на сайте это легко.Намного труднее будет добавить к этому тексту: цвет, фон, анимацию.Если вы хотите узнать и попробовать сделать красивый текст, нажимайте на текстовые эффекты.
-</h2>
-<h2>Если вы хотите представить на вашем сайте какое-то большое количество информации, то вам подойдет таблица. В таблице можно задать любое количество стобцов, строк а так же объединять их.Так же можно добавить красивый текст или же задать какие то эффекты в оформлении слобцов и строк.</h2>
-<h2>На странице "трансформации" вы можете посмотреть различные эффекты.Их вы можете использовать в изображениях, тексте и т.д</h2>
-<h2>Галерея-слайдер - это просто поток красивых изображений, который вы также можете посмотреть(первые 15 секунд возможен черный экран).</h2>
-<h2>Анимация CSS - это самая трудная анимация css, которую я только делал.Именно ту, которая представляется на той страничке, я делал порядка 4 часов</h2>
-<h2>Тема создания сайтов очень разнообразна и интересна. Можно очень много экпереминтировать над созданием различных сайтов. Добавлять изображения, таблицы, текст</h2>
+    <footer>
+        <p>&copy; 2025 Мой Дипломный Проект</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<img src="01.jpg"  style="float:left width:300px">
-<img src="02.jpg"  style="float:left width:300px">    
-</body>   
-<h1>Рекламка</h1>
-<video width="1280" height="720" controls>
-  <source src="abc.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 </html>
-
