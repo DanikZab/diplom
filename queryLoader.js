@@ -179,3 +179,65 @@ var QueryLoader = {
 		});
 	}
 }
+document.addEventListener('DOMContentLoaded', () => {
+    createFireworks(10); // Количество фейерверков
+});
+
+function createFireworks(count) {
+    const container = document.querySelector('.firework-container');
+    
+    for (let i = 0; i < count; i++) {
+        // Задержка для последовательного запуска
+        setTimeout(() => {
+            createFirework(container);
+        }, i * 300);
+    }
+    
+    // Удаляем контейнер после завершения анимации
+    setTimeout(() => {
+        container.remove();
+    }, count * 300 + 1500);
+}
+
+function createFirework(container) {
+    const colors = [
+        '#ff0000', '#00ff00', '#0000ff', '#ffff00', 
+        '#ff00ff', '#00ffff', '#ff8800', '#ff0088'
+    ];
+    
+    const particleCount = 50 + Math.floor(Math.random() * 50);
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight * 0.5;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Случайный угол и расстояние
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 50 + Math.random() * 150;
+        
+        // Вычисляем конечные координаты
+        const tx = Math.cos(angle) * distance;
+        const ty = Math.sin(angle) * distance;
+        
+        // Устанавливаем CSS переменные
+        particle.style.setProperty('--x', `${x}px`);
+        particle.style.setProperty('--y', `${y}px`);
+        particle.style.setProperty('--tx', `${tx}px`);
+        particle.style.setProperty('--ty', `${ty}px`);
+        
+        // Случайный цвет
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Случайная задержка для эффекта разброса
+        particle.style.animationDelay = `${Math.random() * 0.2}s`;
+        
+        container.appendChild(particle);
+        
+        // Удаляем частицу после анимации
+        setTimeout(() => {
+            particle.remove();
+        }, 1500);
+    }
+}
