@@ -130,3 +130,191 @@ footer {
 .about, .skills, .projects, .stats, .gallery {
     animation: fadeIn 1.5s ease-in-out;
 }
+/* Анимации */
+        .animation-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .animation-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .animation-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .animation-box p {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            animation: rotate 8s infinite linear;
+        }
+        
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            background: rgba(67, 97, 238, 0.8);
+        }
+        
+        .cube-face.front {
+            transform: translateZ(50px);
+        }
+        
+        .cube-face.back {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+        
+        .cube-face.right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        
+        .cube-face.left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        
+        .cube-face.top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        
+        .cube-face.bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        
+        @keyframes rotate {
+            from { transform: rotateX(0) rotateY(0); }
+            to { transform: rotateX(360deg) rotateY(360deg); }
+        }
+        
+        .btn-pulse {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-pulse:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-pulse:active {
+            transform: translateY(1px);
+        }
+        
+        .btn-pulse::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .btn-pulse:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Drag and Drop */
+        .drag-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .drag-item {
+            padding: 12px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            cursor: move;
+            user-select: none;
+            transition: all 0.3s;
+        }
+        
+        .drag-item:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .drag-item:active {
+            opacity: 0.7;
+        }
+        
+        .drop-zone {
+            min-height: 100px;
+            width: 100%;
+            border: 3px dashed #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .drop-zone.highlight {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+        
